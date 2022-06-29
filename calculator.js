@@ -7,12 +7,13 @@ divide = "/";
 
 fnumber = parseInt(prompt("Can i get a digit(s) from you"));
 snumber = parseInt(prompt("Can i get another digit(s) from you "));
+
 arithemetric = prompt("What sign do you want to use (+, -, *, /)");
 
-if (fnumber == "NaN" || snumber == "NaN") {
-  alert(`Your number isn't a number`);
-} else {
-  switch (arithemetric) {
+calculate(arithemetric);
+
+function calculate(symbol) {
+  switch (symbol) {
     case "+":
       answer = fnumber + snumber;
       break;
@@ -30,6 +31,5 @@ if (fnumber == "NaN" || snumber == "NaN") {
       answer = "There was an error";
       break;
   }
-
   alert(`The answer is ${answer}`);
 }
